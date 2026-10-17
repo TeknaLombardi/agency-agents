@@ -45,12 +45,12 @@
 - Categoria inventario: fork prompt/agenti.
 
 ### Architettura (contesto)
-_Revisione 2026-10-16, metodo Cum scire, fonte GitHub `TeknaLombardi/agency-agents` @ `7632f066821e` (sola lettura)._
-- **Stack**: come upstream `msitarzewski/agency-agents`: agenti Markdown + script Bash/Python; linguaggi API: Shell, Python, PowerShell [VERIFICATO: `/languages` @`7632f066821e`]
-- **Struttura** [VERIFICATO: albero @`7632f066821e`]: stesse cartelle per divisione di `Pesach85/agency-agents` **meno** `healthcare/` e `research/` (snapshot più vecchio); `integrations/`, `scripts/` (10 file), `divisions.json`, `tools.json`
+_Revisione 2026-10-16, metodo Cum scire, fonte GitHub `TeknaLombardi/agency-agents` @ `7632f066821e` (sola lettura); riverifica puntuale 2026-10-18 @ `0b7376b`._
+- **Stack**: come upstream `msitarzewski/agency-agents`: agenti Markdown + script Bash/Python; linguaggi API: Shell, Python, PowerShell [VERIFICATO: `/languages` @`0b7376b`]
+- **Struttura** [VERIFICATO: albero @`0b7376b`]: stessi percorsi di `Pesach85/agency-agents` (cartelle per divisione, incluse `healthcare/` e `research/`); `integrations/`, `scripts/` (37 file al primo livello), `divisions.json`, `tools.json`
 - **Flusso dati**: `.md` agente → `scripts/convert.sh` → `integrations/` → install locale [INFERITO: nomi script, come fork Pesach85]
 - **Comandi build/test** [VERIFICATO: `.github/workflows/lint-agents.yml` @`7632f066821e`]: `./scripts/lint-agents.sh <file>`, `./scripts/check-agent-originality.sh <file>` (sandbox)
-- **Confini / cosa NON toccare**: tutto upstream (fork 0 avanti / 419 indietro rispetto a upstream main [VERIFICATO: API compare 2026-10-16]); org TeknaLombardi: niente sync né PR senza HITL
+- **Confini / cosa NON toccare**: tutto upstream (fork di `msitarzewski/agency-agents`; unico file locale: `CLAUDE.md` [VERIFICATO: API compare 2026-10-18]); org TeknaLombardi: niente sync né PR senza HITL
 - **UI / design**: N/A [VERIFICATO: albero]
 - **Glossario**: *divisione* · *agente* · *integration* · *convert* · *lint agenti*
 - IGNOTO: 0 campi (motivo del fork in org TeknaLombardi: IGNOTO)
